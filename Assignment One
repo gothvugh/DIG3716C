@@ -1,0 +1,55 @@
+ do {
+            //Main Menu
+            var userString = prompt("Enter 1, 2 , 3, or Exit.");
+            var flag = true;
+                switch(userString) {
+                    case "1":
+                    //Program One 
+                    var stringToConvert = prompt("Enter a String.");
+                        if (stringToConvert.length == 0) {
+                            console.log("You need to enter something.")
+                        } else {
+                            console.log(stringToConvert);
+                        }
+                    break;
+
+                    case "2":
+                    //Program Two
+                        if (stringToConvert == null || stringToConvert == 0) {
+                            console.log("You need to first enter a String.");
+                            userString = prompt ("Enter 1, 2, 3, or Exit.");
+                        } else {
+                        var convertedString = stringToConvert.split(' ');
+                        var newString = '';
+
+                        //Function to measure each word in the string and apply the ROBOT Language
+                        convertedString.forEach(function (i) {
+                            newString += (i + ((i.length < 5) ? "-boink" : "-bork") + " ");
+                        });
+
+                        console.log("String Converted");
+                        }  
+                    break;
+
+                    case "3":
+                    //Program Three
+                        if ( newString == null) {
+                            console.log("You need to first convert your String.");
+                        } else {
+                            console.log(newString);
+                        }
+                    break;
+                    
+                    case "Exit":
+                    //Exit
+                        console.log("Thank you for using the Robot Language Translator!");
+                        flag = false;
+                    break;
+
+                    default: 
+                    //Invalid Answers
+                        console.log("Your answer isn't valid.");
+                    break;
+                }
+
+            } while (flag == true);
